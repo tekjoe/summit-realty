@@ -1,0 +1,61 @@
+.meet-the-team {
+  background: $lightPurple;
+  padding: 4rem 0;
+  &__title {
+    max-width: 60ch;
+    margin-bottom: 2rem;
+    h3 {
+      font-size: $h4;
+    }
+  }
+  &__members {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style-type: none;
+    .member {
+      background: $veryLightPurple;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px hsla(282, 50%, 25%, 0.1);
+      flex: 1;
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+      }
+      &__description {
+        padding: 2rem;
+        h4,
+        p {
+          margin-bottom: 1.5rem;
+        }
+      }
+      &__contact {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+  }
+  @media (min-width: $sm) {
+    padding: 5rem 0;
+    &__title {
+      h3 {
+        font-size: $h3;
+        line-height: 1.2;
+      }
+    }
+    &__members {
+      flex-direction: row;
+    }
+  }
+  @media (min-width: $md) {
+    padding: 8rem 0;
+    &__title {
+      max-width: 70ch;
+      margin-bottom: 4rem;
+      h3 {
+        font-size: $h2;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.masthead {
+  background: $lightPurple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 335px;
+  &__body {
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+      font-size: $h4;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    p {
+      max-width: 50ch;
+    }
+  }
+  @media (min-width: $sm) {
+    &__body {
+      max-width: 80%;
+      h1 {
+        font-size: $h3;
+        margin-bottom: 1.25rem;
+        max-width: 22ch;
+      }
+      p {
+        max-width: 60ch;
+      }
+    }
+  }
+  @media (min-width: $md) {
+    height: 400px;
+    &--big {
+      height: 600px;
+    }
+    &__body {
+      max-width: 60%;
+      h1 {
+        font-size: $h2;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  @media (min-width: $lg) {
+    &__body {
+      max-width: 40%;
+      h1 {
+        font-size: $h1;
+        max-width: 22ch;
+      }
+    }
+  }
+}

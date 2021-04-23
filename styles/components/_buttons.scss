@@ -1,0 +1,62 @@
+.btn {
+  font-family: $body-text;
+  text-decoration: none;
+  color: white;
+  font-size: $h6;
+  font-weight: 500;
+  background: $darkPurple;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 1rem 2rem;
+  min-width: 224px;
+  text-align: center;
+  box-shadow: 0 0 20px hsla(281, 26%, 50%, 0.25);
+  transition: background 0.3s ease-in-out;
+  &:hover {
+    background: hsl(281, 26%, 34%);
+  }
+  &--big {
+    padding: 1rem 2rem;
+  }
+  &--secondary {
+    background: #c0c0c0;
+  }
+}
+
+button.btn,
+input[type="submit"].wpcf7-submit {
+  font-family: $body-text;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: $h6;
+  font-weight: 500;
+  background: $darkPurple;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 1rem 2rem;
+  min-width: 224px;
+  width: max-content;
+  text-align: center;
+  box-shadow: 0 0 20px hsla(281, 26%, 50%, 0.25);
+  transition: background 0.3s ease-in-out;
+  &:hover {
+    background: hsl(281, 26%, 34%);
+  }
+  &--big {
+    padding: 1rem 2rem;
+  }
+  &--secondary {
+    background: #c0c0c0;
+  }
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @media (min-width: $xs) {
+    flex-direction: row;
+  }
+}

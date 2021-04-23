@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap");
+
+$title-text: "Playfair Display", serif;
+$body-text: "IBM Plex Sans", sans-serif;
+
+@import "./variables";
+@import "./colors";
+@import "./typography";
+@import "./reset";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $body-text;
+  background-color: $veryLightPurple;
+}
+
+a {
+  text-decoration: none;
+  color: $darkPurple;
+}

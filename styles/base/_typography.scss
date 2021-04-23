@@ -1,0 +1,40 @@
+// Scale 1.250 – Major Third
+$h1: 54.93px;
+$h2: 43.95px;
+$h3: 35.16px;
+$h4: 28.13px;
+$h5: 22.5px;
+$h6: 18px;
+$p: 16px;
+$small: 14.4px;
+
+$headings: (
+  h1: $h1,
+  h2: $h2,
+  h3: $h3,
+  h4: $h4,
+  h5: $h5,
+  h6: $h6,
+);
+
+@each $heading, $size in $headings {
+  #{$heading} {
+    line-height: 1.1;
+    font-size: $size;
+    font-family: $title-text;
+    color: $veryDarkPurple;
+  }
+}
+
+body {
+  font-family: $body-text;
+}
+
+p {
+  font-size: $p;
+  margin-bottom: $p;
+  line-height: 1.5;
+  @media (min-width: $md) {
+    font-size: $h6;
+  }
+}

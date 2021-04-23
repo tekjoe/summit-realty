@@ -1,0 +1,14 @@
+.container {
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  @media (min-width: $sm) {
+    padding: 0;
+    max-width: 960px;
+  }
+  @media (min-width: $md) {
+    max-width: 1160px;
+  }
+  @media (min-width: $lg) {
+    max-width: 1400px;
+  }
+}

@@ -1,0 +1,260 @@
+.call-to-action {
+  background: url("../../../../../wp-content/themes/summit-realty/images/ctaImage.png");
+  background-position: center;
+  background-size: cover;
+  height: px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 18rem;
+  .btn {
+    margin-top: -2.25rem;
+    @media (min-width: $sm) {
+      margin-top: -2.5rem;
+      padding: 2rem;
+      min-width: 448px;
+    }
+  }
+  @media (min-width: $md) {
+    height: 450px;
+  }
+}
+
+.features {
+  padding: 4rem 0;
+  &__proof,
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $sm) {
+      flex-direction: row;
+    }
+  }
+  &__proof {
+    gap: 2rem;
+    margin-bottom: 3rem;
+    h2 {
+      font-size: $h4;
+    }
+    & > * {
+      flex: 1;
+    }
+    @media (min-width: $sm) {
+      gap: 6rem;
+      margin-bottom: 5rem;
+      h2 {
+        font-size: $h3;
+      }
+    }
+    @media (min-width: $md) {
+      h2 {
+        font-size: $h2;
+      }
+    }
+  }
+  &__list {
+    list-style-type: none;
+    gap: 2rem;
+  }
+  @media (min-width: $md) {
+    padding: 6rem 0 12rem 0;
+  }
+  @media (min-width: $lg) {
+    padding: 8rem 0 16rem 0;
+  }
+}
+
+.feature {
+  padding: 1rem;
+  flex: 1;
+  &__image {
+    margin-bottom: 1.25rem;
+    height: 2rem;
+    width: 2rem;
+  }
+  &__title {
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    font-size: $h6;
+  }
+  &__description {
+  }
+  @media (min-width: $sm) {
+    &__title {
+      font-size: $h5;
+    }
+    &__image {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+}
+
+.featured-property {
+  display: flex;
+  flex-direction: column;
+  &__image {
+    flex: 1;
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+  &__details {
+    flex: 1;
+    padding: 2rem 1.25rem;
+    background: $lightPurple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    span {
+      text-transform: uppercase;
+      color: $veryDarkPurple;
+      font-weight: bold;
+      display: block;
+      letter-spacing: 3%;
+      font-size: 14.4px;
+      margin-bottom: 1rem;
+      &::after {
+        content: "";
+        display: block;
+        height: 4px;
+        background-color: $veryDarkPurple;
+        width: 25%;
+        margin-top: 0.5rem;
+      }
+    }
+    .title {
+      color: $veryDarkPurple;
+      font-family: $title-text;
+      font-weight: bold;
+      font-size: $h4;
+    }
+    .description {
+      max-width: 65ch;
+      margin-bottom: 3rem;
+    }
+    .starting-price {
+      font-weight: bold;
+      font-size: $h6;
+      margin-bottom: 2rem;
+    }
+    .amenities {
+      list-style-type: none;
+      color: #6f6f6f;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      li {
+        display: flex;
+        flex: 1;
+        flex-basis: calc(50% - 2rem);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .image {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+  @media (min-width: $xs) {
+    &__image {
+      img {
+        max-height: 325px;
+      }
+    }
+    &__details {
+      .amenities {
+        gap: 3rem;
+        li {
+          flex-basis: unset;
+        }
+      }
+    }
+  }
+  @media (min-width: $sm) {
+    flex-direction: row;
+    &__image {
+      img {
+        max-height: unset;
+      }
+    }
+    &__details {
+      padding: 3rem;
+      .title {
+        font-size: $h3;
+      }
+    }
+  }
+  @media (min-width: $md) {
+    &__details {
+      padding: 5rem;
+      &::before {
+        content: "";
+        height: 100%;
+        width: 8rem;
+        background-color: $lightPurple;
+        position: absolute;
+        left: -8rem;
+        display: block;
+      }
+      .title {
+        font-size: $h2;
+      }
+    }
+    &__image {
+      margin-top: -8rem;
+      z-index: 2;
+      img {
+        height: 75%;
+      }
+    }
+  }
+  @media (min-width: $lg) {
+    &__details {
+      .title {
+        font-size: $h1;
+      }
+    }
+  }
+}
+
+.cta {
+  background: $mediumPurple;
+  padding: 3rem 1.25rem;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    h2 {
+      font-size: $h4;
+    }
+    & > * {
+      flex: 1;
+    }
+    @media (min-width: $sm) {
+      flex-direction: row;
+      gap: 6rem;
+      padding: 5rem 0;
+      h2 {
+        font-size: $h3;
+      }
+    }
+    @media (min-width: $md) {
+      padding: 8rem 0;
+      h2 {
+        font-size: $h2;
+      }
+    }
+  }
+  @media (min-width: $xs) {
+    padding: 4rem 0;
+  }
+}
