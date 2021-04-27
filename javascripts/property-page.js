@@ -1,5 +1,3 @@
-const $ = jQuery;
-
 $(() => {
   // Create and mount the thumbnails slider.
   var secondarySlider = new Splide("#secondary-slider", {

@@ -4,7 +4,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 335px;
+  height: 220px;
+  &--big {
+    height: 335px;
+  }
   &__body {
     padding: 0 1.25rem;
     display: flex;

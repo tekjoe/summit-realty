@@ -1,5 +1,3 @@
-const $ = jQuery;
-
 $(() => {
   new Glide(".glide", {
     autoplay: 6000,

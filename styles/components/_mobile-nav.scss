@@ -1,0 +1,113 @@
+.close-button {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 50;
+  line-height: 1;
+  background: darken($mediumPurple, 40%);
+  border: none;
+  border-radius: 50%;
+  opacity: 0;
+  border: 2px solid $darkPurple;
+  svg {
+    height: 1.25rem;
+    width: 1.25rem;
+    fill: $lightPurple;
+  }
+  @media (min-width: $sm) {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 260px;
+  background: darken($mediumPurple, 40%);
+  top: 0;
+  z-index: 100;
+  right: -260px;
+  overflow-x: scroll;
+  .call {
+    width: 100%;
+    background: $mediumPurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      padding: 1rem 2rem;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      display: block;
+    }
+  }
+  nav {
+    .mobile-nav__links {
+      list-style-type: none;
+      list-style-position: inside;
+      .menu-item-has-children {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        .expand-menu {
+          color: white;
+          font-size: 1.5rem;
+          font-weight: bold;
+          cursor: pointer;
+          padding: 1rem;
+          border-left: 2px solid #613675;
+          line-height: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: 1;
+        }
+      }
+      .menu-item {
+        border-bottom: 2px solid #613675;
+        a,
+        span {
+          padding: 1.25rem 1rem;
+          display: block;
+          font-size: 1.125rem;
+          letter-spacing: 0.5px;
+          color: white;
+          font-weight: bold;
+          text-decoration: none;
+          flex: 4;
+        }
+      }
+      .sub-menu {
+        list-style-type: none;
+        display: none;
+        opacity: 0;
+        height: 0;
+        flex: 1;
+        flex-basis: 100%;
+        .menu-item {
+          border-bottom: none;
+          background: lighten($darkPurple, 5%);
+          border-bottom: 2px solid #613675;
+          z-index: 200;
+          position: relative;
+          &:first-of-type {
+            border-top: 2px solid #613675;
+          }
+          &:last-of-type {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $sm) {
+    display: none;
+  }
+}

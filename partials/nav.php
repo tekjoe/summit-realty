@@ -1,10 +1,10 @@
 <nav class="navigation">
   <div class="container">
-    <ul>
-      <li><a href="<?php echo site_url(); ?>">Home</a></li>
-      <li><a href="<?php echo site_url('/properties/'); ?>">Properties</a></li>
-      <li><a href="<?php echo site_url('/resources/'); ?>">Resources</a></li>
-      <li><a href="<?php echo site_url('/contact-us/'); ?>">Contact Us</a></li>
-    </ul>
+    <?php wp_nav_menu(array(
+              "theme_location" => "header-menu",
+              "container" => "ul",
+              "container_class" => "nav__links",
+              "menu_class" => "nav__links"
+              )); ?>
   </div>
 </nav>

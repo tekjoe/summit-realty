@@ -1,0 +1,48 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  &-wrap {
+    flex-wrap: wrap;
+  }
+  @media (min-width: $xs) {
+    flex-direction: row;
+  }
+}
+
+.col {
+  flex: 1;
+  &-60 {
+    flex-basis: 60%;
+  }
+  &-50 {
+    flex-basis: calc(50% - 1rem);
+  }
+  &-40 {
+    flex-basis: 40%;
+  }
+  &-100 {
+    flex-basis: 100%;
+  }
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+.gap-3 {
+  gap: 3rem;
+}
+.gap-4 {
+  gap: 4rem;
+}
+.gap-5 {
+  gap: 5rem;
+}
+
+.is-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

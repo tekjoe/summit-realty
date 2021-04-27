@@ -1,10 +1,13 @@
 @import "./base/base";
 
 @import "./layout/containers";
+@import "./layout/layout";
+@import "./layout/header";
 
 @import "./components/buttons";
 @import "./components/masthead";
 @import "./components/nav";
+@import "./components/mobile-nav";
 @import "./components/testimonials";
 @import "./components/meet-the-team";
 @import "./components/properties";
@@ -16,3 +19,5 @@
 @import "./pages/home";
 @import "./pages/property";
 @import "./pages/contact-us";
+@import "./pages/about";
+@import "./pages/buying";
