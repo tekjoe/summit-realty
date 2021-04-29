@@ -22,11 +22,14 @@
         $address = get_field('address');
         $beds = get_field('beds');
         $baths = get_field('baths');
+        $sold = get_field('sold');
         $square_feet = get_field('square_footage');
         ?>
         <li class="property">
           <a href="<?php echo the_permalink(); ?>">
+            <?php if ($sold): ?>
             <div class="status">sold</div>
+            <?php endif; ?>
             <div class="property__image">
               <?php the_post_thumbnail('medium_large'); ?>
             </div>
