@@ -1,5 +1,3 @@
-const $ = jQuery;
-
 $(document).ready(() => {
   const map = L.map("map", { scrollWheelZoom: false }).setView(
     [43.00402, -88.211873],

@@ -1,12 +1,31 @@
+<?php
+      $properties = new WP_Query(
+    array(
+          'post_type' => "properties",
+          'posts_per_page' => 1,
+          'meta_query' => array(array(
+            'key' => 'featured',
+            'value' => true
+          ))
+        )
+);
+      if ($properties->have_posts()):
+        while ($properties->have_posts()): $properties->the_post();
+        $price = get_field('price');
+        $description = get_field('description');
+        $address = get_field('address');
+        $beds = get_field('beds');
+        $baths = get_field('baths');
+        $floors = get_field('floors');
+        $square_feet = get_field('square_footage');
+        ?> -->
 <section class="featured-property">
-  <div class="featured-property__image"><img
-      src="<?php echo get_template_directory_uri() . '/images/';?>Featured-Image.png" alt="Featured Property">
+  <div class="featured-property__image"><?php the_post_thumbnail('medium_large'); ?>
   </div>
   <div class="featured-property__details">
     <span>featured property</span>
-    <p class="title">2101 6th St Milwaukee</p>
-    <p class="description">This home has a recently renovated master bedroom and updated kitchen. Home has newer
-      windows, recently installed sump pump and radon system along with a new water heater.</p>
+    <p class="title"><?php echo $address ?></p>
+    <p class="description"><?php echo $description ?></p>
     <ul class="amenities">
       <li>
         <div class="image">
@@ -16,7 +35,7 @@
               fill="#2B1736" />
           </svg>
         </div>
-        <div class="info">5,299ft2</div>
+        <div class="info"><?php echo $square_feet . 'ft²' ?></div>
       </li>
       <li>
         <div class="image">
@@ -32,7 +51,7 @@
               fill="#2B1736" />
           </svg>
         </div>
-        <div class="info">6 Bedrooms</div>
+        <div class="info"><?php echo $beds . ' Beds' ?></div>
       </li>
       <li>
         <div class="image"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
@@ -48,7 +67,7 @@
               </clipPath>
             </defs>
           </svg></div>
-        <div class="info">4 Baths</div>
+        <div class="info"><?php echo $baths . ' Baths' ?> </div>
       </li>
       <li>
         <div class="image"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"
@@ -64,13 +83,18 @@
               </clipPath>
             </defs>
           </svg></div>
-        <div class="info">3 Floors</div>
+        <div class="info"><?php echo $floors . ' Floors' ?> </div>
       </li>
     </ul>
-    <p class="starting-price">Starting Price: $157,500</p>
+    <p class="starting-price"><?php echo 'Starting Price: $' . $price ?> </p>
     <div class="btn-group">
-      <a href="#" class="btn">Property Details</a>
+      <a href="<?php echo the_permalink(); ?>" class="btn">Property Details</a>
 
     </div>
   </div>
 </section>
+<?php
+endwhile;
+endif;
+wp_reset_postdata();
+?>

@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 4rem;
+    padding: 2rem;
     margin-top: -5rem;
     border-radius: 1rem;
     .price {
@@ -21,7 +21,7 @@
     .amenities {
       display: flex;
       justify-content: space-between;
-      gap: 3rem;
+      gap: 2rem;
       .beds,
       .baths,
       .square-footage {
@@ -33,11 +33,25 @@
         .data,
         .label {
           font-weight: 600;
-          font-size: 1.25rem;
+          font-size: $h6;
         }
         .data {
           margin-bottom: 0.5rem;
-          font-size: $h4;
+          font-size: $h6;
+        }
+      }
+    }
+  }
+  @media (min-width: $xs) {
+    &__body {
+      padding: 2rem 4rem;
+      .amenities {
+        .beds,
+        .baths,
+        .square-footage {
+          .data {
+            font-size: 1.25rem;
+          }
         }
       }
     }
@@ -53,6 +67,13 @@
       }
       .amenities {
         gap: 6rem;
+        .beds,
+        .baths,
+        .square-footage {
+          .data {
+            font-size: $h4;
+          }
+        }
       }
     }
   }

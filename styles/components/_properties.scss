@@ -117,11 +117,42 @@
         .data,
         .label {
           font-weight: 600;
-          font-size: 1.25rem;
+          font-size: 1rem;
         }
         .data {
           margin-bottom: 0.5rem;
-          font-size: 1.5rem;
+          font-size: 1.125rem;
+        }
+      }
+      @media (min-width: $xs) {
+        gap: 1rem;
+      }
+      @media (min-width: $sm) {
+        gap: 2rem;
+        .beds,
+        .baths,
+        .square-footage {
+          .data,
+          .label {
+            font-size: 1.125rem;
+          }
+          .data {
+            font-size: 1.25rem;
+          }
+        }
+      }
+      @media (min-width: $md) {
+        gap: 3rem;
+        .beds,
+        .baths,
+        .square-footage {
+          .data,
+          .label {
+            font-size: 1.25rem;
+          }
+          .data {
+            font-size: 1.5rem;
+          }
         }
       }
     }

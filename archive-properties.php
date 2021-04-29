@@ -44,7 +44,7 @@
                 </div>
                 <div class="square-footage">
                   <div class="data"><?php echo $square_feet ?></div>
-                  <div class="label">sqft</div>
+                  <div class="label">ft²</div>
                 </div>
               </div>
             </div>

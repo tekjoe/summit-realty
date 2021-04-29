@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<header class="masthead">
+<header class="masthead masthead--med">
   <div class="masthead__body">
     <h1><?php the_title(); ?></h1>
   </div>

@@ -2,6 +2,7 @@
 <header class="masthead">
   <div class="masthead__body">
     <h1><?php the_title(); ?></h1>
+
   </div>
 </header>
 <main>

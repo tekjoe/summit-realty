@@ -73,6 +73,7 @@
     display: flex;
     .menu-item {
       position: relative;
+      padding-bottom: 0.5rem;
       &:not(:last-of-type) {
         margin-right: 1rem;
       }
@@ -85,44 +86,38 @@
       // Show Drop Down Menu
       &:hover .sub-menu {
         display: flex;
+        transform: rotateX(0deg);
       }
       // Drop Down Menu
       .sub-menu {
-        display: none;
+        // display: none;
+        transform-origin: top center;
+        transform: rotateX(90deg);
         flex-direction: column;
         list-style-type: none;
-        background-image: linear-gradient(
-          to top,
-          hsl(247, 31%, 63%) calc(100% - 24px),
-          transparent 10%
-        );
         position: absolute;
+        background: $darkPurple;
         z-index: 10;
+        overflow: hidden;
         min-width: 100%;
-        padding: 2rem 1.5rem 1.5rem 1.5rem;
-        top: 0.75rem;
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          border-top: 12px solid transparent;
-          border-bottom: 12px solid hsl(247, 31%, 63%);
-          border-left: 12px solid transparent;
-          border-right: 12px solid transparent;
-          top: 0;
-        }
+        gap: 0;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+        box-shadow: 0 0 20px hsla(281, 26%, 50%, 0.25);
+        transition: transform 0.15s ease-in-out;
         .menu-item {
           margin-right: 0;
-          margin-bottom: 0.5rem;
-          &:first-of-type {
-            margin-top: 0.5rem;
-          }
-          &:last-of-type {
-            margin-bottom: 0;
-          }
+          padding-bottom: 0;
           a {
             color: white;
             white-space: nowrap;
+            font-weight: 500;
+            display: block;
+            padding: 1rem 2rem;
+            transition: background 0.15s ease-in-out;
+            &:hover {
+              background: lighten($darkPurple, 10%);
+            }
           }
         }
       }

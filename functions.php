@@ -46,6 +46,9 @@ class SR_Menu_Walker extends Walker_Nav_Menu
     }
 }
 
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page();
+}
 
 function summit_realty_setup()
 {
@@ -68,6 +71,9 @@ function summit_realty_setup()
         wp_enqueue_style('leaflet-css', "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css");
         wp_enqueue_script('leaflet-js', "https://unpkg.com/leaflet@1.7.1/dist/leaflet.js");
         wp_enqueue_script('map-js', get_theme_file_uri('/javascripts/map.js'));
+    }
+    if (is_page("faq")) {
+        wp_enqueue_script('faq-js', get_theme_file_uri('/javascripts/faq.js'));
     }
 }
 

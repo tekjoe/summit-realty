@@ -4,9 +4,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 220px;
+  height: 10rem;
   &--big {
     height: 335px;
+  }
+  &--med {
+    height: 20rem;
   }
   &__body {
     padding: 0 1.25rem;
@@ -38,9 +41,12 @@
     }
   }
   @media (min-width: $md) {
-    height: 400px;
+    height: 20rem;
     &--big {
       height: 600px;
+    }
+    &--med {
+      height: 400px;
     }
     &__body {
       max-width: 60%;

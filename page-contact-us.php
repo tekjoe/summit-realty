@@ -25,7 +25,7 @@
         </div>
         <div class="contact__form">
           <div class="map" id="map"></div>
-          <?php echo do_shortcode('[contact-form-7 id="162" title="Contact Us"]') ?>
+          <?php echo do_shortcode('[contact-form-7 id="'.get_field('contact_form', 'option').'" title="Contact Form"]'); ?>
         </div>
       </div>
     </div>

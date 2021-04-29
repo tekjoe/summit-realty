@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<header class="masthead">
+<header class="masthead masthead--med">
   <div class="masthead__body">
     <h1>Featured Properties</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna
